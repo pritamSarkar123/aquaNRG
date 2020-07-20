@@ -1,0 +1,14 @@
+.mystyle{
+    display: none;
+}
+body{
+    background: linear-gradient(to top, #6666ff 0%, #ffffff 100%);
+}
+  #gmap_canvas{
+      width: 100%;
+      min-width: 350px;
+      min-height: 350px;
+  }
+  .bg-custom-2 {
+    background-image: linear-gradient(to top, #13547a 0%, #80d0c7 100%);
+    }
