@@ -22,12 +22,16 @@
        height: 400px;  /* The height is 400 pixels */
        width: 100%;  /* The width is the width of the web page */
       }
+      .img-thumbnail{
+        max-height: 100%;
+        max-width: 100%;
+      }
    </style>
    <link rel="stylesheet" href="{% static 'aquaNRG/styles/style.css' %}">
    
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-custom-2" >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="topnav" >
       <a class="navbar-brand" href="{% url 'home' %}">
         <img src="{% static 'aquaNRG/images/logo.png' %}" height=40 width=120 class="d-inline-block align-top"/>
       </a>
@@ -51,7 +55,7 @@
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="{% static 'aquaNRG/pdfs/about.pdf' %}"> 
+            <a class="nav-link" href="{% static 'aquaNRG/pdfs/about_new.pdf' %}"> 
               About Us <span class="sr-only">(current)</span></a
             >
           </li>
@@ -61,13 +65,8 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#phone_no"
-              >Contact Us <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#mail_us"
-              >Mail Us <span class="sr-only">(current)</span></a
+            <a class="nav-link" href="#help-section"
+              >Help! <span class="sr-only">(current)</span></a
             >
           </li>
           <li class="nav-item">
@@ -79,24 +78,23 @@
       </div>
     </nav>
     <!-- Jumbotron -->
-    <div class="jumbotron">
-      <div class="shadow card card-image" style="background-image:url(https://wallpaperaccess.com/full/2615351.jpg);background-size:cover;">
+    <div class="jumbotron p-1 mx-0 mb-1">
+      <div class="shadow card card-image" style="background-image:url(https://wallpaperaccess.com/full/2615351.jpg);background-size:cover;background-blend-mode: normal;">
         <div class="text-white text-center rgba-stylish-strong py-5 px-4">
         <div class="py-5">
     
           <!-- Content -->
           <img name="logo" src="{% static 'aquaNRG/images/logo.png' %}" style="max-width: 300px;text-shadow: 2px 2px 5px blue;color: yellow;">
-          <h4 class="lead card-title h4 my-4 pu-1 pb-2 text-dark">Packaged Drinking Water</h4>
-          <p class="lead mb-4 pb-2 px-md-5 mx-md-5 text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur obcaecati vero aliquid libero doloribus ad, unde tempora maiores, ullam, modi qui quidem minima debitis perferendis vitae cumque et quo impedit.</p>
-          <img class="shadow rounded mb-5 img-fluid " src="{% static 'aquaNRG/images/wa3.jpeg' %}">
+          <h4 class="lead card-title h4 my-4 pu-1 pb-2 text-dark"><strong>Packaged Drinking Water</strong></h4>
+          <p class="lead mb-4 pb-2 px-md-5 mx-md-5 text-dark"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur obcaecati vero aliquid libero doloribus ad, unde tempora maiores, ullam, modi qui quidem minima debitis perferendis vitae cumque et quo impedit.</strong></p>
           <br>
-          <button class="btn btn-primary btn-rounded">Buy now <i class="far fa-gem ml-1"></i></button>
-    
+          <a href="#products"><button class="btn btn-primary btn-rounded">Products<i class="far fa-gem ml-1"></i></button>
+          </a>
         </div>
       </div>
     </div>
     </div>
-<!-- Jumbotron -->
+    <!-- Jumbotron -->
 <hr>
     <div>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -104,6 +102,9 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -114,17 +115,29 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{% static 'aquaNRG/images/wa1.jpeg' %}" style="height: 340px;">
+            <img class="d-block w-100" src="{% static 'aquaNRG/images/wa2.jpeg' %}" style="height: 340px;">
             <div class="carousel-caption d-none d-md-block">
               <h5>skfjosjfiosjf</h5>
               <p>kajdsjfsjfdgjdjgdjgpdjgpdfjgdpg</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{% static 'aquaNRG/images/wa2.jpeg' %}" style="height: 340px;">
+            <img class="d-block w-100" src="{% static 'aquaNRG/images/wa5.jpg' %}" style="height: 340px;">
             <div class="carousel-caption d-none d-md-block">
               <h5>skfjosjfiosjf</h5>
               <p>kajdsjfsjfdgjdjgdjgpdjgpdfjgdpg</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{% static 'aquaNRG/images/wa6.jpg' %}" style="height: 340px;">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>skfjosjfiosjf</h5>
+              <p>kajdsjfsjfdgjdjgdjgpdjgpdfjgdpg</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{% static 'aquaNRG/images/wa7.jpg' %}" style="height: 340px;">
+            <div class="carousel-caption d-none d-md-block">
             </div>
           </div>
         </div>
@@ -138,67 +151,81 @@
         </a>
       </div>
     </div>
-<hr>   
-    <div class="container container-fluid">    
-      <div class="row images" id="products">
+<hr>
+    <div class="container rounded shadow py-3">
+      <div class="embed-responsive embed-responsive-21by9 rounded shadow">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ANC0n3c1uHQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+<hr>
+    <div id="products" class="jumbotron p-1 mx-0 mb-1 shadow rounded text-light text-center" style="background-image:url(https://cdn.wallpapersafari.com/77/5/Nc035W.jpg);background-size:contain;background-blend-mode: normal;">
+        <h2 class="my-4 pu-1 pb-2 text-light">Products Range</h2>
+        <label>Lorem, ipsum dol</label><br>
+        <label>Lorem, ipsum dol</label><br>
+        <label>Lorem, ipsum dol</label><br>
+        <label>Lorem, ipsum dol</label><br>
+        <label>Lorem, ipsum dol</label><br>
+  </div>
+<hr>
+      <div class="row images px-2">
         <div class="myimg col-6 col-xl-3 text-center rounded mb-3 border-info">
           <a href="{% static 'aquaNRG/images/2.jpeg' %}">
-            <img class="img-thumbnail p-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/2.jpeg' %}"/>
+            <img class="img-thumbnail py-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/2.jpeg' %}" style="width: 100%;"/>
           </a>
         </div>
         <div class="myimg col-6 col-xl-3 text-center rounded mb-3 border-info">
           <a href="{% static 'aquaNRG/images/3.jpeg' %}">
-            <img class="img-thumbnail p-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/3.jpeg' %}"/>
+            <img class="img-thumbnail py-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/3.jpeg' %}" style="width: 100%;"/>
           </a>
         </div>
         <div class="myimg col-6 col-xl-3 text-center rounded mb-3 border-info">
           <a href="{% static 'aquaNRG/images/4.jpeg' %}">
-            <img class="img-thumbnail p-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/4.jpeg' %}"/>
+            <img class="img-thumbnail py-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/4.jpeg' %}" style="width: 100%;"/>
           </a>
         </div>
         <div class="myimg col-6 col-xl-3 text-center rounded mb-3 border-info">
           <a href="{% static 'aquaNRG/images/7.jpeg' %}">
-            <img class="img-thumbnail p-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/7.jpeg' %}"/>
+            <img class="img-thumbnail py-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/7.jpeg' %}" style="width: 100%;"/>
           </a>
         </div>
         <div class="myimg col-6 col-xl-3 text-center rounded mb-3 border-info">
           <a href="{% static 'aquaNRG/images/9.jpeg' %}">
-            <img class="img-thumbnail p-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/9.jpeg' %}"/>
+            <img class="img-thumbnail py-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/9.jpeg' %}" style="width: 100%;"/>
           </a>
         </div>
         <div class="myimg col-6 col-xl-3 text-center rounded mb-3 border-info">
           <a href="{% static 'aquaNRG/images/10.jpeg' %}">
-            <img class="img-thumbnail p-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/10.jpeg' %}"/>
+            <img class="img-thumbnail py-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/10.jpeg' %}" style="width: 100%;"/>
           </a>
         </div>
         <div class="myimg col-6 col-xl-3 text-center rounded mb-3 border-info">
           <a href="{% static 'aquaNRG/images/11.jpeg' %}">
-            <img class="img-thumbnail p-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/11.jpeg' %}"/>
+            <img class="img-thumbnail py-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/11.jpeg' %}" style="width: 100%;"/>
           </a>
         </div>
         <div class="myimg col-6 col-xl-3 text-center rounded mb-3 border-info">
           <a href="{% static 'aquaNRG/images/12.jpeg' %}">
-            <img class="img-thumbnail p-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/12.jpeg' %}"/>
+            <img class="img-thumbnail py-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/12.jpeg' %}" style="width: 100%;"/>
           </a>
         </div>
         <div class="myimg col-6 col-xl-6 text-center rounded mb-3 border-info">
           <a href="{% static 'aquaNRG/images/6.jpeg' %}">
-            <img class="img-thumbnail p-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/6.jpeg' %}"/>
+            <img class="img-thumbnail py-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/6.jpeg' %}" style="width: 100%;"/>
           </a>
         </div>
         
         <div class="myimg col-6 col-xl-6 text-center rounded mb-3 border-info">
           <a href="{% static 'aquaNRG/images/5.jpeg' %}">
-            <img class="img-thumbnail p-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/5.jpeg' %}"/>
+            <img class="img-thumbnail py-1 shadow rounded bg-white" src="{% static 'aquaNRG/images/5.jpeg' %}" style="width: 100%;"/>
           </a>
         </div>
       </div>
-    </div>
+    
     <hr>
     <div id="mapdiv" class="mapouter container mystyle mapdiv jumbotron py-4 text-center shadow bg-white rounded mb-5"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=aqua%20nrg%2Cshyamnagar%20&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;}.gmap_canvas {overflow:hidden;}</style></div>
      
     <div id="footer">
-      <div class="my-3">
+      <div>
         <div class="card text-center text-light bg-dark">
         <div class="card-header">
           <marquee behavior="scroll" direction="left">
@@ -206,10 +233,19 @@
           </marquee>
         </div>
         <div class="card-body">
-          <h5 class="card-title">For More Details:</h5>
-          <p id="phone_no" class="card-text text-light"><em><strong>Call Us : </strong></br>PH:</em>9477034555</br><em>Office PH:</em>7278027460</p>
-          <p id="full_address" class="card-text text-light"><strong>Address :</strong></br>17 udaynagar 29 jagaddal,</br>bhatpara (M),purba bidyadharpur,</br>24 PGS (N),WB - 743127,</br>Near :- Neheru market</p>
-          <a id="mail_us" href="mailto:sghosal97@hotmail.com" class="btn btn-primary">Mail Us</a>
+          <a class="my-5 text-light my-3 shadow" href="#topnav"><img src="{% static 'aquaNRG/images/btt.png' %}" style="width: 50px;height: 50px;"></a>
+          <h5 name="footer-help" class="card-title">Back to Top</h5>
+          <hr>
+          <h5 name="footer-help" class="card-title">Need Help?</h5>
+          <label for="footer-help">Contact us via phone or email.</label>
+          <hr>
+          <p id="full_address" class="card-text text-light"><strong>Address:</strong></br>17 udaynagar 29 jagaddal,bhatpara (M),purba bidyadharpur,</br>24 PGS (N),WB - 743127,</br>Near :- Neheru market</p>
+          <hr>
+          <p id="help-section" class="card-text text-light"><em><strong>Call Us :</strong></br>Help :</em>+91 8961976503</br><em>Office PH :</em>+91 7278027460</p>
+          <a href="mailto:sghosal97@hotmail.com" class="btn btn-primary mb-3">Mail Us</a><br>
+          <hr>
+          <h5 class="card-title">Join us on</h5>
+          <a href="https://www.facebook.com/AQUA-NRG-105993824177139/"><img src="{% static 'aquaNRG/images/f.png' %}" style="width: 50px;height: 50px;"/></a><br>
         </div>
         <div class="card-footer text-light">
         {% now 'Y' %}
